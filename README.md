@@ -21,7 +21,7 @@ A modern and responsive task management web application built with HTML, CSS, an
 
 ## 🚀 Live Demo
 
-https://dariusfeyze.github.io/FeiTask/
+https://3008-fyz.github.io/FeiTask/
 
 ## 👩‍💻 Author
 
