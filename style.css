@@ -1,0 +1,280 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#dbeafe,#93c5fd,#60a5fa);
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:700px;
+    background:rgba(255,255,255,.35);
+    backdrop-filter:blur(20px);
+    border-radius:25px;
+    padding:30px;
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.header h1{
+    color:#1e3a8a;
+    font-size:32px;
+}
+
+.header p{
+    color:#475569;
+    margin-top:5px;
+}
+
+#darkBtn{
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#3b82f6;
+    color:#fff;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+}
+
+#darkBtn:hover{
+    transform:scale(1.1);
+}
+
+.add-task{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr auto;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+.add-task input,
+.add-task select{
+    padding:14px;
+    border:none;
+    border-radius:15px;
+    outline:none;
+    font-size:15px;
+}
+
+#addBtn{
+    width:55px;
+    border:none;
+    border-radius:15px;
+    background:#2563eb;
+    color:#fff;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+}
+
+#addBtn:hover{
+    transform:scale(1.1);
+}
+
+.filter{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.filter button{
+    flex:1;
+    border:none;
+    border-radius:12px;
+    padding:12px;
+    cursor:pointer;
+    background:#bfdbfe;
+    transition:.3s;
+    font-weight:600;
+}
+
+.filter button.active{
+    background:#2563eb;
+    color:white;
+}
+
+.progress{
+    background:#e0f2fe;
+    border-radius:15px;
+    padding:15px;
+    margin-bottom:25px;
+}
+
+.progress-top{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+.progress-bar{
+    width:100%;
+    height:12px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+#progressFill{
+    width:0%;
+    height:100%;
+    background:#2563eb;
+    transition:.4s;
+}
+
+#taskList{
+    list-style:none;
+}
+
+.task{
+    background:white;
+    border-radius:18px;
+    padding:18px;
+    margin-bottom:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    animation:fade .3s;
+}
+
+.left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.left input{
+    width:20px;
+    height:20px;
+}
+
+.task h3{
+    color:#1e3a8a;
+    font-size:17px;
+}
+
+.task p{
+    color:#64748b;
+    font-size:13px;
+    margin-top:3px;
+}
+
+.badge{
+    padding:4px 10px;
+    border-radius:20px;
+    color:white;
+    font-size:12px;
+}
+
+.low{
+    background:#22c55e;
+}
+
+.medium{
+    background:#eab308;
+}
+
+.high{
+    background:#ef4444;
+}
+
+.actions{
+    display:flex;
+    gap:10px;
+}
+
+.actions button{
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:12px;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.edit{
+    background:#2563eb;
+}
+
+.delete{
+    background:#ef4444;
+}
+
+.actions button:hover{
+    transform:scale(1.1);
+}
+
+.completed h3{
+    text-decoration:line-through;
+    opacity:.6;
+}
+
+.dark{
+    background:#0f172a;
+}
+
+.dark .container{
+    background:rgba(30,41,59,.9);
+}
+
+.dark h1,
+.dark h3{
+    color:white;
+}
+
+.dark p{
+    color:#cbd5e1;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:700px){
+
+    .add-task{
+        grid-template-columns:1fr;
+    }
+
+    #addBtn{
+        width:100%;
+        height:50px;
+    }
+
+    .task{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+    .actions{
+        width:100%;
+        justify-content:flex-end;
+    }
+
+}
